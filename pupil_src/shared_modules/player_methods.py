@@ -141,6 +141,7 @@ def find_closest(target, source):
     -
     https://stackoverflow.com/questions/8914491/finding-the-nearest-value-and-return-the-index-of-array-in-python/8929827#8929827
     """
+    target = np.asanyarray(target)
     idx = np.searchsorted(target, source)
     idx = np.clip(idx, 1, len(target) - 1)
     left = target[idx - 1]
